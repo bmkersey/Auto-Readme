@@ -1,22 +1,14 @@
 {
-  "name": "auto-readme",
+  "name": "static-site",
   "version": "1.0.0",
-  "description": "Simple ReadMe Generator",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bmkersey/Auto-Readme.git"
-  },
-  "keywords": [
-    "readme"
-  ],
-  "author": "bmkersey",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bmkersey/Auto-Readme/issues"
-  },
-  "homepage": "https://github.com/bmkersey/Auto-Readme#readme"
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^6.3.1"
+  }
 }
