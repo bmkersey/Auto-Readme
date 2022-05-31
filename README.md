@@ -9,6 +9,7 @@
   * [Contribution](#contribution)
   * [Tests](#tests)
   * [Questions](#questions)
+  * [ScreenCaps/Vids](#screencaps/vids)
   ## Installation
   Clone the repo to your desired location. Open code editor to the root directory for the project. In your terminal, you will have to type "npm install" to get required packages
   ## Usage
@@ -26,6 +27,9 @@
   ## Questions
   If you have any questions about this project please reach out by Email or on GitHub!  
   Email: bmkersey@gmail.com  
-  GitHub: [bmkersey](https://github.com/bmkersey)  
+  GitHub: [bmkersey](https://github.com/bmkersey)
+
+  ## Screencaps/Vids
+  ![demo](./assets/example.gif) 
   
   
