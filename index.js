@@ -8,7 +8,7 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: questions[0],
+        message: "What is the title of your project?",
         validate: titleInput =>{
             if (titleInput){
                 return true;
@@ -21,7 +21,7 @@ const questions = [
     {
         type: 'input',
         name: 'description',
-        message: questions[1],
+        message: 'Please enter a detailed description.',
         validate: descriptionInput =>{
             if (descriptionInput){
                 return true;
@@ -34,7 +34,7 @@ const questions = [
     {
         type: 'input',
         name: 'install',
-        message: questions[2],
+        message: 'Please list install directions.',
         validate: installInput => {
             if (installInput){
                 return true;
@@ -46,7 +46,7 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: questions[3],
+        message: 'Please enter usage information for your project.',
         validate: usageInput => {
             if (usageInput){
                 return true;
@@ -58,7 +58,7 @@ const questions = [
     {
         type: 'input',
         name: 'contribute',
-        message: questions[4],
+        message: 'Please enter contribution guidelines for your project.',
         validate: contributeInput => {
             if (contributeInput){
                 return true;
@@ -69,25 +69,13 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'test',
-        message: questions[5],
+        name: 'tests',
+        message: 'Please enter instructions for testing for your project.',
         validate: testInput => {
             if (testInput){
                 return true;
             } else{
                 console.log('Please enter test details!');
-            }
-        }
-    },
-    {
-        type: 'input',
-        name: 'license',
-        message: questions[6],
-        validate: licenseInput => {
-            if (licenseInput){
-                return true;
-            } else{
-                return false;
             }
         }
     },
@@ -103,29 +91,69 @@ const questions = [
             }
             return true;
         }
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'What is your GitHub username?',
+        validate: githubInput => {
+            if (!githubInput) {
+                console.log('Please enter your GitHub username!');
+                return false
+            }
+            return true;
+        }
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email address?',
+        validate: emailInput => {
+            if (!emailInput) {
+                console.log('Please enter your email!');
+                return false
+            }
+            return true;
+        }
     }
 ];
 
 
 // TODO: Create a function to write README file
-function writeFile(fileName, data) {
-    fs.writeFile(fileName, data, err => {
-        if (err) {
-            return console.log(err);
-        }
-
-        console.log('Your readme has been generated!!')
-    })
-}
+const writeFile = file =>{
+    return new Promise((resolve, reject)=>{
+        fs.writeFile('./dist/README.md', file, err => {
+            // if there's an error, reject the Promise and send the error to the Promise's `.catch()` method
+            if (err) {
+                reject(err);
+              // return out of the function here to make sure the Promise doesn't accidentally execute the resolve() function as well
+                return;
+            }
+    
+            // if everything went well, resolve the Promise and send the successful data to the `.then()` method
+            resolve({
+                ok: true,
+                message: 'File created!'
+            });
+        });
+    });
+};
 
 // TODO: Create a function to initialize app
 const promptUser = () => {
-    var answers = inquirer.prompt
+    inquirer.prompt(questions)
     .then(answers =>{
-        generateFile(answers)
+        return generateFile(answers);
     })
     .then(file =>{
-        writeFile('readme.md', file)
+        console.log('File created! Check the dist folder for output!')
+        return writeFile(file);
+        
+    })
+    .catch(err =>{
+        if (err){
+            throw err;
+        }
     })
     
 };
