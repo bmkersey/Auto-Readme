@@ -37,34 +37,34 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if(license == 'Apache 2.0 License') {
+  if(license === 'Apache 2.0 License') {
     return 'https://opensource.org/licenses/Apache-2.0';
   }  
-  if(license == 'Boost Software License 1.0') {
+  if(license === 'Boost Software License 1.0') {
     return 'https://www.boost.org/LICENSE_1_0.txt';
   }  
-  if(license == 'BSD 3-Clause License') {
+  if(license === 'BSD 3-Clause License') {
     return 'https://opensource.org/licenses/BSD-3-Clause';
   }  
-  if(license == 'BSD 2-Clause License') {
+  if(license ==='BSD 2-Clause License') {
     return 'https://opensource.org/licenses/BSD-2-Clause';
   }  
-  if(license == 'GNU GPL v3') {
+  if(license === 'GNU GPL v3') {
     return 'https://www.gnu.org/licenses/gpl-3.0';
   }  
-  if(license == 'GNU GPL v2') {
+  if(license === 'GNU GPL v2') {
     return 'https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html';
   }  
-  if(license == 'GNU AGPL v3') {
+  if(license === 'GNU AGPL v3') {
     return 'https://www.gnu.org/licenses/agpl-3.0';
   }  
-  if(license == 'GNU LGPL v3') {
+  if(license === 'GNU LGPL v3') {
     return 'https://www.gnu.org/licenses/lgpl-3.0';
   }  
-  if(license == 'The Unlicense') {
+  if(license === 'The Unlicense') {
     return 'http://unlicense.org/';
   }  
-  if(license == 'The MIT License') {
+  if(license === 'The MIT License') {
     return 'https://opensource.org/licenses/MIT';
   }
 
