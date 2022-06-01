@@ -1,7 +1,12 @@
-# title here
-  [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+  # title goes here
+
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
   ## Description
-  descrip here
+
+  desc goes here
+
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
@@ -9,22 +14,31 @@
   * [Contribution](#contribution)
   * [Tests](#tests)
   * [Questions](#questions)
-  ## Installation
-  install here
-  ## Usage
-  usage here
-  ## License
-  This project is covered under Apache 2.0 License.  
-  Please visit [https://opensource.org/licenses/Apache-2.0](https://opensource.org/licenses/Apache-2.0) to learn more.
   
+  ## Installation
+
+  install here
+
+  ## Usage
+
+  usage here
+
+  ## License
+
+  This project uses the The MIT License.  
+  Please visit [https://opensource.org/licenses/MIT](https://opensource.org/licenses/MIT) to learn more.
+  
+
   ## Contribution
+
   contribute here
   
   ## Tests 
-  testing here
+
+  test here
   
   ## Questions
-  If you have any questions about this project please reach out by Email or on GitHub!  
+  Questions? Comments? Concerns? Feel free to reach out!  
   Email: bmkersey@gmail.com  
   GitHub: [bmkersey](https://github.com/bmkersey)  
   
